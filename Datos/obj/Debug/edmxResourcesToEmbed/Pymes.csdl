@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PymesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+    </Key>
+    <Property Name="IdArticulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CodigoDeBarra" Type="String" MaxLength="13" FixedLength="true" Unicode="true" />
+    <Property Name="IdArticuloFamilia" Type="Int32" />
+    <Property Name="stock" Type="Int32" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="FechaAlta" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ArticulosFamilias">
+    <Key>
+      <PropertyRef Name="IdArticuloFamilia" />
+    </Key>
+    <Property Name="IdArticuloFamilia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PymesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Articulos" EntityType="Self.Articulos" />
+    <EntitySet Name="ArticulosFamilias" EntityType="Self.ArticulosFamilias" />
+  </EntityContainer>
+</Schema>

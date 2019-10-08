@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PymesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Articulos">
+    <Key>
+      <PropertyRef Name="IdArticulo" />
+    </Key>
+    <Property Name="IdArticulo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+    <Property Name="Precio" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CodigoDeBarra" Type="nchar" MaxLength="13" />
+    <Property Name="IdArticuloFamilia" Type="int" />
+    <Property Name="stock" Type="int" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="FechaAlta" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ArticulosFamilias">
+    <Key>
+      <PropertyRef Name="IdArticuloFamilia" />
+    </Key>
+    <Property Name="IdArticuloFamilia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="PymesModelStoreContainer">
+    <EntitySet Name="Articulos" EntityType="Self.Articulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticulosFamilias" EntityType="Self.ArticulosFamilias" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

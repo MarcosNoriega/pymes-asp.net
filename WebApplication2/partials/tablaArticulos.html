@@ -1,0 +1,22 @@
+﻿    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+
+        <tbody id="table">
+            <tr ng-repeat="articulo in articulos">
+                <td>{{articulo.Nombre}}</td>
+                <td>{{articulo.Precio}}</td>
+                <td>{{articulo.stock}}</td>
+                <td>
+                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-trash-alt"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>

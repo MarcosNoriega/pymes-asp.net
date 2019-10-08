@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PymesModelStoreContainer" CdmEntityContainer="PymesEntities">
+    <EntitySetMapping Name="Articulos">
+      <EntityTypeMapping TypeName="PymesModel.Articulos">
+        <MappingFragment StoreEntitySet="Articulos">
+          <ScalarProperty Name="IdArticulo" ColumnName="IdArticulo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="CodigoDeBarra" ColumnName="CodigoDeBarra" />
+          <ScalarProperty Name="IdArticuloFamilia" ColumnName="IdArticuloFamilia" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticulosFamilias">
+      <EntityTypeMapping TypeName="PymesModel.ArticulosFamilias">
+        <MappingFragment StoreEntitySet="ArticulosFamilias">
+          <ScalarProperty Name="IdArticuloFamilia" ColumnName="IdArticuloFamilia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
